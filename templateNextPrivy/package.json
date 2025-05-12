@@ -1,0 +1,32 @@
+{
+  "name": "aleph-argentina",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@privy-io/react-auth": "^2.6.4",
+    "@privy-io/wagmi": "^1.0.3",
+    "@tanstack/react-query": "^5.69.0",
+    "lucide-react": "^0.483.0",
+    "next": "15.2.3",
+    "nuqs": "^2.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vercel": "^41.4.1",
+    "viem": "^2.23.13",
+    "wagmi": "^2.14.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
