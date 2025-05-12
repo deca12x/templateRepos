@@ -7,26 +7,6 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { http } from "wagmi";
 import { defineChain } from "viem";
 
-const zksyncMainnet = defineChain({
-  id: 324,
-  name: "ZKSync Era Mainnet",
-  network: "zksync-era",
-  nativeCurrency: { name: "Ethereum", symbol: "ETH", decimals: 18 },
-  rpcUrls: {
-    default: { http: ["https://mainnet.era.zksync.io"] },
-  },
-});
-
-const zksyncTestnet = defineChain({
-  id: 300,
-  name: "ZKSync Sepolia Testnet",
-  network: "zksync-sepolia",
-  nativeCurrency: { name: "Ethereum", symbol: "ETH", decimals: 18 },
-  rpcUrls: {
-    default: { http: ["https://sepolia.era.zksync.dev"] },
-  },
-});
-
 const mantleMainnet = defineChain({
   id: 5000,
   name: "Mantle Mainnet",
@@ -48,10 +28,8 @@ const mantleTestnet = defineChain({
 });
 
 const wagmiConfig = createConfig({
-  chains: [zksyncMainnet, zksyncTestnet, mantleMainnet, mantleTestnet],
+  chains: [mantleMainnet, mantleTestnet],
   transports: {
-    [zksyncMainnet.id]: http(),
-    [zksyncTestnet.id]: http(),
     [mantleMainnet.id]: http(),
     [mantleTestnet.id]: http(),
   },
